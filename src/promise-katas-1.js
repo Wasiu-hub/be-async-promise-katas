@@ -73,7 +73,11 @@ const returnBob = () => {
 // Example:
 // returnList() resolves to the value ['eggs', 'apples', 'milk', 'bread']
 
-const returnList = () => {};
+const returnList = () => {
+  return new Promise((resolve) => {
+    resolve(["eggs", "apples", "milk", "bread"]);
+  });
+};
 
 // 6 Create a function that returns a promise which returns "An error occurred" if it rejects
 // Example:
