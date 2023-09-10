@@ -116,7 +116,14 @@ const internalServerError = () => {
 // happySad(1) resolves to "happy"
 // happySad(0) rejects to "sad"
 
-const happySad = () => {};
+const happySad = (a) => {
+  return new Promise((resolve, reject) => {
+    if (a < 1) {
+      reject("sad");
+    }
+    resolve("happy");
+  });
+};
 
 // 10 Create a function that returns a promise which resolves to "Yes. Luke, I am your father." if the
 // parameter is "Luke" and rejects to "Not your dad." if the value is anything else
