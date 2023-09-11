@@ -131,7 +131,16 @@ const happySad = (a) => {
 // amIYourFather() resolves to "Yes. Luke, I am your father."
 // amIYourFather() rejects to "Not your dad."
 
-const amIYourFather = () => {};
+const amIYourFather = (name) => {
+  return new Promise((resolve, reject) => {
+    if (name !== "Luke") {
+      reject("Not your dad.");
+    }
+    if (name === "Luke") {
+      resolve("Yes. Luke, I am your father.");
+    }
+  });
+};
 
 // 11 Create a function that returns a promise. The promise should resolve to a new function that returns "My name is <input name>"
 // Example:
