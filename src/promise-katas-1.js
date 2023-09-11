@@ -146,7 +146,14 @@ const amIYourFather = (name) => {
 // Example:
 // A call to myNameIs() resolves to a new function that takes one argument, name, and returns "My name is name" Eg (name) => `My name is ${name}`
 
-const myNameIs = () => {};
+const myNameIs = () => {
+  // const newFunction = (name) => {
+  //   return `My name is ${name}`;
+  // };
+  return new Promise((resolve) => {
+    resolve((name) => `My name is ${name}`);
+  });
+};
 
 module.exports = {
   returnPromise,
